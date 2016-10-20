@@ -83,5 +83,52 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="103.89805097451276"/>
         </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="KOf-Fz-o77">
+            <objects>
+                <viewController storyboardIdentifier="JZPhotoViewController" id="glk-Dn-zhB" customClass="JZPhotoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mTf-if-3q9"/>
+                        <viewControllerLayoutGuide type="bottom" id="8qk-FL-WB4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oen-8i-7v5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n2u-9z-KSk">
+                                <gestureRecognizers/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4a-Pd-bJY">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="VGu-6b-QUs"/>
+                                    <constraint firstAttribute="width" constant="44" id="Zle-fP-6fs"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="closeButton"/>
+                                <connections>
+                                    <action selector="clickCloseButton:" destination="glk-Dn-zhB" eventType="touchUpInside" id="7FR-z9-JSj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8qk-FL-WB4" firstAttribute="top" secondItem="n2u-9z-KSk" secondAttribute="bottom" constant="5" id="7Tf-dx-xcH"/>
+                            <constraint firstAttribute="trailing" secondItem="m4a-Pd-bJY" secondAttribute="trailing" id="J6B-GB-qnd"/>
+                            <constraint firstItem="m4a-Pd-bJY" firstAttribute="top" secondItem="mTf-if-3q9" secondAttribute="bottom" id="M45-lq-Mwa"/>
+                            <constraint firstAttribute="trailing" secondItem="n2u-9z-KSk" secondAttribute="trailing" constant="5" id="UOY-NJ-aXG"/>
+                            <constraint firstItem="n2u-9z-KSk" firstAttribute="top" secondItem="mTf-if-3q9" secondAttribute="bottom" constant="24" id="Vcr-Al-7cj"/>
+                            <constraint firstItem="n2u-9z-KSk" firstAttribute="leading" secondItem="oen-8i-7v5" secondAttribute="leading" constant="5" id="qc0-Gm-gPy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="n2u-9z-KSk" id="Rsx-2L-5nI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eoT-EB-Yer" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="856.79999999999995" y="103.89805097451276"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="closeButton" width="64" height="64"/>
+    </resources>
 </document>

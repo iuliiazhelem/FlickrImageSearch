@@ -10,6 +10,7 @@
 #import "JZFlickrNetworking.h"
 #import "JZPhotoCollectionViewCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "JZPhotoViewController.h"
 
 @interface ViewController ()<UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -73,6 +74,17 @@
     
     JZPhotoCollectionViewCell *photoCell = (JZPhotoCollectionViewCell *)cell;
     [photoCell.imageView cancelImageDownloadTask];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    JZPhotoViewController *vc = (JZPhotoViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"JZPhotoViewController"];
+
+    vc.photoURL = [JZFlickrNetworking createImageURLFromJSON:_searchResult[indexPath.row] withSize:JZImageSizeLarge];
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        vc.modalPresentationStyle = UIModalPresentationFormSheet;
+    }
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)showError:(NSError *)error {
