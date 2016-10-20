@@ -13,6 +13,7 @@
 		220FF3E31DB89BEC006B60B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220FF3E11DB89BEC006B60B6 /* Main.storyboard */; };
 		220FF3E51DB89BEC006B60B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220FF3E41DB89BEC006B60B6 /* Assets.xcassets */; };
 		220FF3E81DB89BEC006B60B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220FF3E61DB89BEC006B60B6 /* LaunchScreen.storyboard */; };
+		220FF3F21DB8A211006B60B6 /* JZFlickrNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FF3F11DB8A211006B60B6 /* JZFlickrNetworking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		220FF3E41DB89BEC006B60B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		220FF3E71DB89BEC006B60B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		220FF3E91DB89BEC006B60B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		220FF3F01DB8A211006B60B6 /* JZFlickrNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZFlickrNetworking.h; path = Networking/JZFlickrNetworking.h; sourceTree = "<group>"; };
+		220FF3F11DB8A211006B60B6 /* JZFlickrNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZFlickrNetworking.m; path = Networking/JZFlickrNetworking.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		220FF3D71DB89BEC006B60B6 /* JZFlickrImageSearch */ = {
 			isa = PBXGroup;
 			children = (
+				220FF3EF1DB8A1EC006B60B6 /* Networking */,
 				220FF3DB1DB89BEC006B60B6 /* AppDelegate.h */,
 				220FF3DC1DB89BEC006B60B6 /* AppDelegate.m */,
 				220FF3DE1DB89BEC006B60B6 /* ViewController.h */,
@@ -77,6 +81,15 @@
 				220FF3D91DB89BEC006B60B6 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		220FF3EF1DB8A1EC006B60B6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				220FF3F01DB8A211006B60B6 /* JZFlickrNetworking.h */,
+				220FF3F11DB8A211006B60B6 /* JZFlickrNetworking.m */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +166,7 @@
 			files = (
 				220FF3E01DB89BEC006B60B6 /* ViewController.m in Sources */,
 				220FF3DD1DB89BEC006B60B6 /* AppDelegate.m in Sources */,
+				220FF3F21DB8A211006B60B6 /* JZFlickrNetworking.m in Sources */,
 				220FF3DA1DB89BEC006B60B6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +326,7 @@
 				220FF3EE1DB89BEC006B60B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

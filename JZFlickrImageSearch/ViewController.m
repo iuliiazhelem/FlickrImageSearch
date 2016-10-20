@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "JZFlickrNetworking.h"
 
 @interface ViewController ()<UISearchBarDelegate>
 
@@ -15,8 +16,13 @@
 @implementation ViewController
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    NSLog(@"self.searchBar.text");
     [searchBar resignFirstResponder];
+    
+    [JZFlickrNetworking searchImagesWithName:searchBar.text completionHandler:^(NSArray *searchResult) {
+        NSLog(@"RESULT : %@", searchResult);
+    } errorHandler:^(NSError *error) {
+        NSLog(@"ERROR : %@", error);
+    }];
 }
 
 @end
