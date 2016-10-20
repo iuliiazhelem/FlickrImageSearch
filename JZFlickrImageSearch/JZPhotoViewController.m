@@ -37,10 +37,10 @@
 
 -(void)handlePinchZoomWithGestureRecognizer:(UIPinchGestureRecognizer *)pinchGestureRecognizer {
     self.imageView.transform = CGAffineTransformScale(self.imageView.transform, pinchGestureRecognizer.scale, pinchGestureRecognizer.scale);
-    pinchGestureRecognizer.scale = 1.0;
     self.scrollView.contentSize = self.imageView.frame.size;
-    
+    pinchGestureRecognizer.scale = 1.0;
 }
+
 -(void)handleRotationWithGestureRecognizer:(UIRotationGestureRecognizer *)rotationGestureRecognizer{
     self.imageView.transform = CGAffineTransformRotate(self.imageView.transform, rotationGestureRecognizer.rotation);
     

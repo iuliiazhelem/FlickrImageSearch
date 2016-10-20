@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220000211DB8EA0D00DB75D8 /* JZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 220000201DB8EA0D00DB75D8 /* JZBaseViewController.m */; };
 		220FF3DA1DB89BEC006B60B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FF3D91DB89BEC006B60B6 /* main.m */; };
 		220FF3DD1DB89BEC006B60B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FF3DC1DB89BEC006B60B6 /* AppDelegate.m */; };
 		220FF3E01DB89BEC006B60B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FF3DF1DB89BEC006B60B6 /* ViewController.m */; };
@@ -21,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		1CA4D9AFA55361CAE4A799F5 /* libPods-JZFlickrImageSearch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JZFlickrImageSearch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2200001F1DB8EA0D00DB75D8 /* JZBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZBaseViewController.h; sourceTree = "<group>"; };
+		220000201DB8EA0D00DB75D8 /* JZBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZBaseViewController.m; sourceTree = "<group>"; };
 		220FF3D51DB89BEC006B60B6 /* JZFlickrImageSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JZFlickrImageSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		220FF3D91DB89BEC006B60B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		220FF3DB1DB89BEC006B60B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 				220FF3F41DB8AC2C006B60B6 /* JZPhotoCollectionViewCell.m */,
 				220FF3F61DB8B77E006B60B6 /* JZPhotoViewController.h */,
 				220FF3F71DB8B77E006B60B6 /* JZPhotoViewController.m */,
+				2200001F1DB8EA0D00DB75D8 /* JZBaseViewController.h */,
+				220000201DB8EA0D00DB75D8 /* JZBaseViewController.m */,
 				220FF3E11DB89BEC006B60B6 /* Main.storyboard */,
 				220FF3E41DB89BEC006B60B6 /* Assets.xcassets */,
 				220FF3E61DB89BEC006B60B6 /* LaunchScreen.storyboard */,
@@ -251,6 +256,7 @@
 			files = (
 				220FF3E01DB89BEC006B60B6 /* ViewController.m in Sources */,
 				220FF3F81DB8B77E006B60B6 /* JZPhotoViewController.m in Sources */,
+				220000211DB8EA0D00DB75D8 /* JZBaseViewController.m in Sources */,
 				220FF3DD1DB89BEC006B60B6 /* AppDelegate.m in Sources */,
 				220FF3F21DB8A211006B60B6 /* JZFlickrNetworking.m in Sources */,
 				220FF3DA1DB89BEC006B60B6 /* main.m in Sources */,
@@ -298,6 +304,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -320,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -346,6 +353,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -362,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

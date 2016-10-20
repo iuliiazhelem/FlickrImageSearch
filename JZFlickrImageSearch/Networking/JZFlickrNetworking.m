@@ -21,8 +21,10 @@ static NSUInteger kImagesPerPage = 50;
     
     [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
-        if (error && errorHandler) {
-            errorHandler(error);
+        if (error) {
+            if (errorHandler) {
+                errorHandler(error);
+            }
             return;
         }
         

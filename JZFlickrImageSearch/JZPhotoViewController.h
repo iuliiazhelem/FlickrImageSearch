@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JZBaseViewController.h"
 
-@interface JZPhotoViewController : UIViewController
+@interface JZPhotoViewController : JZBaseViewController
 
 @property (strong, nonatomic) NSURL *photoURL;
 

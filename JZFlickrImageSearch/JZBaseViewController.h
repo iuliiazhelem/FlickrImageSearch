@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  JZBaseViewController.h
 //  JZFlickrImageSearch
 //
 //  Created by Iuliia Zhelem on 10/20/16.
@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JZBaseViewController.h"
 
-@interface ViewController : JZBaseViewController
-
+@interface JZBaseViewController : UIViewController
 
 @end
-

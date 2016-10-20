@@ -65,7 +65,9 @@
         //automatically cancelled.
         [cell.imageView setImageWithURLRequest:request placeholderImage:[UIImage imageNamed:@"placeholder"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
             weakCell.imageView.image = image;
-        } failure:nil];
+        } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
+            //the error object describing the network or parsing error that occurred
+        }];
     } else {
         cell.imageView.image = [UIImage imageNamed:@"placeholder"];
     }
@@ -105,7 +107,7 @@
     
     NSUInteger itemsPerRow = self.columnCountSegmentControll.selectedSegmentIndex + 1;
     
-    CGFloat paddingSpace = 10.0 * (itemsPerRow + 1);
+    CGFloat paddingSpace = 15.0 * (itemsPerRow + 1);
     CGFloat availableWidth = self.imagesCollectionView.frame.size.width - paddingSpace;
     CGFloat widthPerItem = availableWidth / itemsPerRow;
     
