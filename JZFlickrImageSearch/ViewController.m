@@ -15,6 +15,9 @@
 @interface ViewController ()<UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *imagesCollectionView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *columnCountSegmentControll;
+
+- (IBAction)segmentedControllChanged:(id)sender;
 
 @property (strong, nonatomic) NSArray *searchResult;
 
@@ -98,4 +101,29 @@
     });
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSUInteger itemsPerRow = self.columnCountSegmentControll.selectedSegmentIndex + 1;
+    
+    CGFloat paddingSpace = 10.0 * (itemsPerRow + 1);
+    CGFloat availableWidth = self.imagesCollectionView.frame.size.width - paddingSpace;
+    CGFloat widthPerItem = availableWidth / itemsPerRow;
+    
+    return CGSizeMake(widthPerItem, widthPerItem);
+}
+
+- (IBAction)segmentedControllChanged:(id)sender {
+    [self invalidateLayout];
+}
+
+- (void)invalidateLayout {
+    [self.imagesCollectionView.collectionViewLayout invalidateLayout];
+    [self.imagesCollectionView setNeedsLayout];
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    
+    [self invalidateLayout];
+}
 @end

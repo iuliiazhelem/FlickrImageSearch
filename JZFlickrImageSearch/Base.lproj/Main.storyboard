@@ -63,19 +63,36 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="xeZ-5w-Rf1"/>
                                 </connections>
                             </collectionView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f6V-WA-2ng">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Wa2-Ll-JAh"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="1 column"/>
+                                    <segment title="2 columns"/>
+                                    <segment title="3 columns"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControllChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="J4C-Hj-Urj"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bqB-cB-2Km" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1gn-hu-Jbu"/>
                             <constraint firstItem="g98-dO-UQD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3uE-ct-O59"/>
                             <constraint firstAttribute="trailing" secondItem="g98-dO-UQD" secondAttribute="trailing" id="C2P-3r-qSY"/>
+                            <constraint firstItem="bqB-cB-2Km" firstAttribute="top" secondItem="f6V-WA-2ng" secondAttribute="bottom" id="N6c-hj-CLA"/>
                             <constraint firstItem="g98-dO-UQD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SxK-eR-Ahg"/>
                             <constraint firstAttribute="trailing" secondItem="bqB-cB-2Km" secondAttribute="trailing" id="W48-dE-bzB"/>
-                            <constraint firstItem="bqB-cB-2Km" firstAttribute="top" secondItem="g98-dO-UQD" secondAttribute="bottom" id="oXa-Pd-6vu"/>
+                            <constraint firstAttribute="trailing" secondItem="f6V-WA-2ng" secondAttribute="trailing" id="aZL-Tp-eLf"/>
+                            <constraint firstItem="f6V-WA-2ng" firstAttribute="top" secondItem="g98-dO-UQD" secondAttribute="bottom" id="ncg-lQ-adG"/>
+                            <constraint firstItem="f6V-WA-2ng" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="p4u-jE-ax8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bqB-cB-2Km" secondAttribute="bottom" id="qq2-Uo-k5Y"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="columnCountSegmentControll" destination="f6V-WA-2ng" id="7Xq-4z-W6i"/>
                         <outlet property="imagesCollectionView" destination="bqB-cB-2Km" id="B1Q-4F-oHE"/>
                     </connections>
                 </viewController>
