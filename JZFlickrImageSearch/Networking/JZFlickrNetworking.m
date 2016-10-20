@@ -46,4 +46,31 @@ static NSUInteger kImagesPerPage = 50;
     return [NSError errorWithDomain:@"JZFlickrImageSearch" code:[json[@"code"] integerValue] userInfo:@{@"message": json[@"message"]}];
 }
 
++ (NSURL *)createImageURLFromJSON:(NSDictionary *)imageData withSize:(JZImageSize)imageSize {
+    //https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
+    NSString *imgSize;
+    switch (imageSize) {
+        case JZImageSizeThumbnail:
+            imgSize = @"t";
+            break;
+        case JZImageSizeMedium:
+            imgSize = @"z";
+            break;
+        default:
+            imgSize = @"b";
+            break;
+    }
+    
+    NSString *urlString = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@_%@.jpg", imageData[@"farm"], imageData[@"server"], imageData[@"id"], imageData[@"secret"], imgSize];
+    
+    return [NSURL URLWithString:urlString];
+}
+
++ (NSURLRequest *)createImageURLRequestFromJSON:(NSDictionary *)imageData withSize:(JZImageSize)imageSize {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[self.class createImageURLFromJSON:imageData withSize:imageSize]];
+    [request addValue:@"image/*" forHTTPHeaderField:@"Accept"];
+    
+    return request;
+}
+
 @end

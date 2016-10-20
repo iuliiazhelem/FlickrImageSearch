@@ -14,9 +14,12 @@
 		220FF3E51DB89BEC006B60B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220FF3E41DB89BEC006B60B6 /* Assets.xcassets */; };
 		220FF3E81DB89BEC006B60B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220FF3E61DB89BEC006B60B6 /* LaunchScreen.storyboard */; };
 		220FF3F21DB8A211006B60B6 /* JZFlickrNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FF3F11DB8A211006B60B6 /* JZFlickrNetworking.m */; };
+		220FF3F51DB8AC2C006B60B6 /* JZPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FF3F41DB8AC2C006B60B6 /* JZPhotoCollectionViewCell.m */; };
+		41A9B80BC3E25203248C57B7 /* libPods-JZFlickrImageSearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA4D9AFA55361CAE4A799F5 /* libPods-JZFlickrImageSearch.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CA4D9AFA55361CAE4A799F5 /* libPods-JZFlickrImageSearch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JZFlickrImageSearch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		220FF3D51DB89BEC006B60B6 /* JZFlickrImageSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JZFlickrImageSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		220FF3D91DB89BEC006B60B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		220FF3DB1DB89BEC006B60B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,6 +32,10 @@
 		220FF3E91DB89BEC006B60B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		220FF3F01DB8A211006B60B6 /* JZFlickrNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZFlickrNetworking.h; path = Networking/JZFlickrNetworking.h; sourceTree = "<group>"; };
 		220FF3F11DB8A211006B60B6 /* JZFlickrNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZFlickrNetworking.m; path = Networking/JZFlickrNetworking.m; sourceTree = "<group>"; };
+		220FF3F31DB8AC2C006B60B6 /* JZPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		220FF3F41DB8AC2C006B60B6 /* JZPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		4057B860CB9B906CE1C8153E /* Pods-JZFlickrImageSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JZFlickrImageSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JZFlickrImageSearch/Pods-JZFlickrImageSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		78F4E11F7AB25A633E9162FD /* Pods-JZFlickrImageSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JZFlickrImageSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-JZFlickrImageSearch/Pods-JZFlickrImageSearch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A9B80BC3E25203248C57B7 /* libPods-JZFlickrImageSearch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +55,8 @@
 			children = (
 				220FF3D71DB89BEC006B60B6 /* JZFlickrImageSearch */,
 				220FF3D61DB89BEC006B60B6 /* Products */,
+				C6CC7FB24C5F3B4FE54B10D8 /* Pods */,
+				B70119DCB12F0181198A5BAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +76,8 @@
 				220FF3DC1DB89BEC006B60B6 /* AppDelegate.m */,
 				220FF3DE1DB89BEC006B60B6 /* ViewController.h */,
 				220FF3DF1DB89BEC006B60B6 /* ViewController.m */,
+				220FF3F31DB8AC2C006B60B6 /* JZPhotoCollectionViewCell.h */,
+				220FF3F41DB8AC2C006B60B6 /* JZPhotoCollectionViewCell.m */,
 				220FF3E11DB89BEC006B60B6 /* Main.storyboard */,
 				220FF3E41DB89BEC006B60B6 /* Assets.xcassets */,
 				220FF3E61DB89BEC006B60B6 /* LaunchScreen.storyboard */,
@@ -92,6 +104,23 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
+		B70119DCB12F0181198A5BAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CA4D9AFA55361CAE4A799F5 /* libPods-JZFlickrImageSearch.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6CC7FB24C5F3B4FE54B10D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4057B860CB9B906CE1C8153E /* Pods-JZFlickrImageSearch.debug.xcconfig */,
+				78F4E11F7AB25A633E9162FD /* Pods-JZFlickrImageSearch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,9 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 220FF3EC1DB89BEC006B60B6 /* Build configuration list for PBXNativeTarget "JZFlickrImageSearch" */;
 			buildPhases = (
+				260E10FC3A6AE3224F7322BF /* [CP] Check Pods Manifest.lock */,
 				220FF3D11DB89BEC006B60B6 /* Sources */,
 				220FF3D21DB89BEC006B60B6 /* Frameworks */,
 				220FF3D31DB89BEC006B60B6 /* Resources */,
+				DE262A9D71D73952D256DE10 /* [CP] Embed Pods Frameworks */,
+				9567E3D6AA30AD1774DB79E7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,6 +191,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		260E10FC3A6AE3224F7322BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9567E3D6AA30AD1774DB79E7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JZFlickrImageSearch/Pods-JZFlickrImageSearch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE262A9D71D73952D256DE10 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JZFlickrImageSearch/Pods-JZFlickrImageSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		220FF3D11DB89BEC006B60B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -168,6 +248,7 @@
 				220FF3DD1DB89BEC006B60B6 /* AppDelegate.m in Sources */,
 				220FF3F21DB8A211006B60B6 /* JZFlickrNetworking.m in Sources */,
 				220FF3DA1DB89BEC006B60B6 /* main.m in Sources */,
+				220FF3F51DB8AC2C006B60B6 /* JZPhotoCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +366,7 @@
 		};
 		220FF3ED1DB89BEC006B60B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4057B860CB9B906CE1C8153E /* Pods-JZFlickrImageSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 285W24646W;
@@ -297,6 +379,7 @@
 		};
 		220FF3EE1DB89BEC006B60B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78F4E11F7AB25A633E9162FD /* Pods-JZFlickrImageSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 285W24646W;
